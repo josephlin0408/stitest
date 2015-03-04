@@ -1,0 +1,6 @@
+<%= bootstrap_form_for @product do |n| %>
+	<%= n.text_field :name %>
+	<%= n.text_field :price %>
+	<%= n.submit '送出' %>
+ <% end %>
+<%= link_to('返回首頁', products_path) %>

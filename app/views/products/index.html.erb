@@ -1,0 +1,9 @@
+<%= render 'common/top' %>
+<% @products.each do |i| %>
+	<%= i.name %>
+	<%= i.price %>
+	<%= link_to('編輯', edit_product_path(i)) %>
+	<%= link_to('刪除', product_path(i), method: :delete) %></br>
+<% end %>
+<hr></br>
+<%= link_to('新增商品', new_product_path) %>

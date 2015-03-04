@@ -1,0 +1,6 @@
+<%= render 'common/top' %>
+<% @post_categories.each do |i| %>
+	<%= i.name %>
+<% end %>
+<%= link_to('新增分類', new_post_category_path) %>
+<%= link_to('返回文章列表', posts_path) %>

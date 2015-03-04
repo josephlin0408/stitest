@@ -1,0 +1,7 @@
+<%= bootstrap_form_for @post do |n| %>
+	<%= n.text_field :name %>
+	<%= n.text_area :content %>
+	<%= n.submit '送出' %>
+<% end %>
+
+<%= link_to('返回首頁', posts_path) %>

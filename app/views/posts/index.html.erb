@@ -1,0 +1,13 @@
+<%= render 'common/top' %>
+
+<%= link_to('文章分類', post_categories_path) %><hr></br>
+<% @posts.each do |i| %>
+	<%= i.name %>
+	<%= i.content %>
+	<%= link_to('編輯', edit_post_path(i)) %>
+	<%= link_to('刪除', post_path(i), method: :delete) %></br>
+<% end %>
+<hr></br>
+
+
+<%= link_to('新增文章', new_post_path) %>
